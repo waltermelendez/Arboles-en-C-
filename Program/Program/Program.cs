@@ -35,14 +35,55 @@ namespace Program
                             Console.WriteLine("Ingrese el nombre del nodo");
                             nombre = Console.ReadLine();
                             arbolito.agregar_nodo(elemento, nombre);
+                            Console.Clear();
                         }
                         break;
                     case 2:
                         {
+                            if (!arbolito.estavacio())
+                            {
+                                Console.WriteLine();
+                                arbolito.InOrder(arbolito.Raiz);
+                                Console.WriteLine();
+                            }
+                            else
+                            {
+                                Console.WriteLine("El arbol esta vacio");
+                                Console.WriteLine();
+                            }
 
                         }
                         break;
-                    case 3: { } break;
+                    case 3:
+                        {
+                            if (!arbolito.estavacio())
+                            {
+                                Console.WriteLine();
+                                arbolito.PreOrder(arbolito.Raiz);
+                                Console.WriteLine();
+                            }
+                            else
+                            {
+                                Console.WriteLine("El arbol esta vacio");
+                                Console.WriteLine();
+                            }
+                        }
+                        break;
+                    case 4:
+                        {
+                            if (!arbolito.estavacio())
+                            {
+                                Console.WriteLine();
+                                arbolito.PostOrder(arbolito.Raiz);
+                                Console.WriteLine();    
+                            }
+                            else
+                            {
+                                Console.WriteLine("El arbol esta vacio");
+                                Console.WriteLine();
+                            }
+                        }
+                        break;
                     default:
                         break;
                 }
