@@ -1,0 +1,7 @@
+C:\Users\walte\Desktop\Desktop_local\Arboles en C#\Program\Program\obj\Debug\Program.csproj.AssemblyReference.cache
+C:\Users\walte\Desktop\Desktop_local\Arboles en C#\Program\Program\obj\Debug\Program.csproj.CoreCompileInputs.cache
+C:\Users\walte\Desktop\Desktop_local\Arboles en C#\Program\Program\bin\Debug\Program.exe.config
+C:\Users\walte\Desktop\Desktop_local\Arboles en C#\Program\Program\bin\Debug\Program.exe
+C:\Users\walte\Desktop\Desktop_local\Arboles en C#\Program\Program\bin\Debug\Program.pdb
+C:\Users\walte\Desktop\Desktop_local\Arboles en C#\Program\Program\obj\Debug\Program.exe
+C:\Users\walte\Desktop\Desktop_local\Arboles en C#\Program\Program\obj\Debug\Program.pdb

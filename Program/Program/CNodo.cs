@@ -8,18 +8,18 @@ namespace Program
 {
     internal class CNodo
     {
-        private string dato;
-        private CNodo hijo;
-        private CNodo hermano;
-        public string Dato { get => dato; set => dato = value; }
-        public CNodo Hijo { get => hijo; set => hijo = value; }
-        public CNodo Hermano { get => hermano; set => hermano = value; }
-
-        public CNodo() {
-
-            dato = "";
-            hijo = null;
-            hermano = null;
+        public int dato;
+        public string datoStr;
+        public CNodo hijoizq;
+        public CNodo hijoder;
+        public CNodo(int d, string nom) { 
+        this.dato = d;
+            this.datoStr = nom;
+            this.hijoder = null;
+            this.hijoizq=null;
+        }
+        public string toString() {
+            return datoStr + "Su dato es " + dato;
         }
     }
 

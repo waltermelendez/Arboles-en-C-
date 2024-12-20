@@ -2,6 +2,7 @@
 using System.CodeDom.Compiler;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -9,43 +10,41 @@ namespace Program
 {
     internal class Arbol
     {
-        private CNodo raiz;
-        private CNodo trabajo;
-        private int i = 0;
-        public Arbol() { 
-        raiz = new CNodo();
+        CNodo Raiz;
+        public Arbol() {
+            Raiz = null;
 
         }
-        public CNodo Insertar(string Pdato, CNodo pNodo)
-        {
-            if (pNodo==null)//Si esta vacio
-            {
-                raiz= new CNodo();
-                raiz.Dato = Pdato;
-                raiz.Hijo = null;
-                raiz.Hermano = null;
-                return raiz;
-            }
-            if (pNodo.Hijo==null) // Se inserta como nuevo hijo.
-            {
-                CNodo temp = new CNodo();
-                temp.Dato = Pdato;
-                pNodo= temp;
-                return temp;
+        public void agregar_nodo(int dato, string nombre) { 
+        CNodo nuevo = new CNodo(dato,nombre);
+            if (Raiz == null) {
+                Raiz = nuevo;
 
             }
-            else //Caso cuando el nodo es un hermando del hijo
+            else
             {
-                trabajo = pNodo.Hijo;
-
-                while (trabajo.Hermano!=null)
-                {
-                        trabajo= trabajo.Hermano;
+                CNodo Auxiliar = Raiz;
+                CNodo Padre;
+                while (true) {
+                Padre = Auxiliar;
+                if (dato<Auxiliar.dato) {
+                        Auxiliar = Auxiliar.hijoizq;
+                        if (Auxiliar==null)
+                        {
+                            Padre.hijoizq = nuevo;
+                            return;
+                        }
+                    }
+                    else
+                    {
+                        Auxiliar = Auxiliar.hijoder;
+                        if (Auxiliar == null) { 
+                        Padre.hijoder=nuevo;
+                            return;
+                        }
+                    }
+                
                 }
-                CNodo temp = new CNodo();
-                temp.Dato = Pdato;  
-                trabajo.Hermano=temp;
-                return temp;
             }
         }
 		
